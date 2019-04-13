@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="sass/style.css">
+    <!-- <script src="js/all.js"></script> -->
+
+</head>
+
+<body>
+    <div>
+        <select id="select">
+            <option value="92">#92</option>
+            <option value="97">#97</option>
+        </select>
+        <label for="">
+            <input type="text" name="" id="txt" placeholder="请输入油量（升）">
+            <button id="btn">确认</button>
+        </label>
+        <p>总金额：<span id="money"></span>元</p>
+    </div>
+
+    <script>
+        /*
+        #97 每升 7元 超过40 每升 6元
+        #92 每升 6元 超过30 每升 5元
+        */  
+            btn.onclick = function(){
+            let select = document.querySelector("#select").value; //油号
+            let txt = document.querySelector("#txt").value; //油量
+            let money = document.querySelector("#money").innerHTML;
+            // console.log(select + "--" + txt)
+            console.log(dom("#select"))
+            if(select == 97){
+                if(txt > 40){
+                    money.innerHTML = (txt - 40) * 6 + (40 * 7);
+                    console.log(money)
+                }else{
+                    money.innerHTML = txt * 7;
+                }
+            }else if(select == 92){
+                if(txt > 30){
+                    money.innerHTML = (txt - 30) * 5 + (30 * 6);
+                    console.log(money)
+                }else{
+                    money.innerHTML = txt * 6;
+                }
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>

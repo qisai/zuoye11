@@ -1,0 +1,1 @@
+function a(){console.log("a")}function a(){console.log("a")}function b(){console.log("b")}function b(){console.log("b"),console.log("压缩")}a(),a(),b(),b();
